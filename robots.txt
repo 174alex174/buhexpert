@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://174alex174.github.io/buhexpert/sitemap.xml
