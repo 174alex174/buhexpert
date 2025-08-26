@@ -13,9 +13,49 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop">
     <meta property="og:url" content="https://174alex174.github.io/buhexpert/">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Подключение Font Awesome для иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Public+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0f8ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #0d78f2;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+        --secondary-50: #f8fafc;
+        --secondary-100: #f1f5f9;
+        --secondary-200: #e2e8f0;
+        --secondary-300: #cbd5e1;
+        --secondary-400: #94a3b8;
+        --secondary-500: #64748b;
+        --secondary-600: #475569;
+        --secondary-700: #334155;
+        --secondary-800: #1e293b;
+        --secondary-900: #0f172a;
+      }
+      body {
+        font-family: 'Public Sans', 'Noto Sans', sans-serif;
+      }
+
+      /* Анимации при прокрутке */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .fade-in-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,228 +85,243 @@
     }
     </script>
 </head>
-<body>
-    <!-- Навигационная панель -->
-    <nav class="navbar" role="navigation" aria-label="Основная навигация">
-        <div class="container">
-            <div class="logo">БухЭксперт</div>
-            <ul id="nav-links">
-                <li><a href="#hero">Главная</a></li>
-                <li><a href="#about">О компании</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#why-us">Преимущества</a></li>
-                <li><a href="#testimonials">Отзывы</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-            <div class="burger-menu" id="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Главный раздел -->
-    <header id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Бухгалтерское обслуживание в Челябинске</h1>
-            <p>Надежность, точность и своевременность в каждом отчете.</p>
-            <a href="#contact" class="btn">Получить консультацию</a>
-        </div>
-    </header>
-
-    <main>
-        <!-- Раздел "О компании" -->
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">Наша История</h2>
-                <div class="about-content">
-                    <div class="about-text fade-in">
-                        <h3>Ваш надежный финансовый партнер</h3>
-                        <p>Наша компания была основана в 2010 году с целью предоставления высококачественных бухгалтерских услуг для малого и среднего бизнеса. За годы работы мы зарекомендовали себя как надежный партнер, помогающий нашим клиентам оптимизировать налогообложение и вести финансовый учет в соответствии со всеми стандартами. Мы гордимся нашей командой профессионалов, которые постоянно совершенствуют свои знания.</p>
-                    </div>
-                    <div class="about-image fade-in">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Команда в офисе" loading="lazy" width="540" height="360">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Раздел "Услуги" -->
-        <section id="services">
-            <div class="container">
-                <h2 class="section-title">Наши бухгалтерские услуги</h2>
-                <div class="services-grid">
-                    <div class="service-item fade-in">
-                        <i class="fas fa-calculator" aria-hidden="true"></i>
-                        <h3>Бухгалтерское сопровождение</h3>
-                        <p>Полное ведение бухгалтерского и налогового учета вашей компании.</p>
-                    </div>
-                    <div class="service-item fade-in">
-                        <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
-                        <h3>Расчет заработной платы</h3>
-                        <p>Своевременный и точный расчет заработной платы, налогов и взносов.</p>
-                    </div>
-                    <div class="service-item fade-in">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        <h3>Налоговое консультирование</h3>
-                        <p>Оптимизация налоговой нагрузки и консультации по вопросам законодательства.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Раздел "Почему выбирают нас" -->
-        <section id="why-us">
-            <div class="container">
-                <h2 class="section-title">Почему выбирают нас</h2>
-                <div class="why-us-grid">
-                    <div class="why-us-item fade-in">
-                        <i class="fas fa-user-tie" aria-hidden="true"></i>
-                        <h3>Экспертность</h3>
-                        <p>Наша команда состоит из сертифицированных бухгалтеров с многолетним опытом.</p>
-                    </div>
-                    <div class="why-us-item fade-in">
-                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                        <h3>Надежность</h3>
-                        <p>Мы гарантируем конфиденциальность и безопасность ваших финансовых данных.</p>
-                    </div>
-                    <div class="why-us-item fade-in">
-                        <i class="fas fa-piggy-bank" aria-hidden="true"></i>
-                        <h3>Экономия</h3>
-                        <p>Аутсорсинг бухгалтерии обходится дешевле, чем содержание штатного специалиста.</p>
-                    </div>
-                     
-                </div>
-            </div>
-        </section>
-
-        <!-- Раздел "Отзывы клиентов" -->
-        <section id="testimonials">
-            <div class="container">
-                <h2 class="section-title">Отзывы наших клиентов</h2>
-                <div class="testimonials-grid">
-                    <!-- Отзыв 1 -->
-                    <div class="testimonial-card fade-in">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">
-                                <img src="https://i.pravatar.cc/150?img=1" alt="Иван Петров" loading="lazy">
-                            </div>
-                            <div class="testimonial-author-info">
-                                <p class="testimonial-author">Иван Петров</p>
-                                <p class="testimonial-company">Ген. директор "СтройТех"</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                        </div>
-                        <p class="testimonial-text">"Передали бухгалтерию на аутсорс в 'БухЭксперт' год назад и ни разу не пожалели. Все отчеты сдаются вовремя, налоги оптимизированы. Настоящие профессионалы!"</p>
-                    </div>
-                    <!-- Отзыв 2 -->
-                    <div class="testimonial-card fade-in">
-                        <div class="testimonial-header">
-                             <div class="testimonial-avatar">
-                                <img src="https://i.pravatar.cc/150?img=2" alt="Мария Сидорова" loading="lazy">
-                            </div>
-                            <div class="testimonial-author-info">
-                                <p class="testimonial-author">Мария Сидорова</p>
-                                <p class="testimonial-company">Владелец "Кафе Уют"</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                        </div>
-                        <p class="testimonial-text">"Очень довольна работой команды. Всегда на связи, готовы проконсультировать по любому вопросу. Помогли разобраться со сложной системой налогообложения для общепита."</p>
-                    </div>
-                    <!-- Отзыв 3 -->
-                    <div class="testimonial-card fade-in">
-                        <div class="testimonial-header">
-                             <div class="testimonial-avatar">
-                                <img src="https://i.pravatar.cc/150?img=3" alt="Алексей Иванов" loading="lazy">
-                            </div>
-                            <div class="testimonial-author-info">
-                                <p class="testimonial-author">Алексей Иванов</p>
-                                <p class="testimonial-company">IT-стартап "КодБудущего"</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                        </div>
-                        <p class="testimonial-text">"Как стартапу нам было важно найти надежного партнера, который возьмет на себя всю бумажную волокиту. 'БухЭксперт' — именно такая компания. Рекомендую!"</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Раздел "Контакты" -->
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Свяжитесь с нами</h2>
-                <div class="contact-grid">
-                    <!-- Левая колонка: Контактная информация -->
-                    <div class="contact-info fade-in">
-                        <h3>Наши контакты</h3>
-                        <br>
-                        <div class="contact-info-item">
-                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            <span><strong>Адрес:</strong> проспект Победы, 256, г. Челябинск, Россия</span>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-phone" aria-hidden="true"></i>
-                            <span><strong>Телефон:</strong> +7 (495) 123-45-67</span>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <span><strong>Email:</strong> info@buhexpert.com</span>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-clock" aria-hidden="true"></i>
-                            <span><strong>Часы работы:</strong> Пн-Пт: 9:00 - 18:00</span>
-                        </div>
-                    </div>
-                    <!-- Правая колонка: Форма обратной связи -->
-                    <div class="contact-form fade-in">
-                        <h3>Задать вопрос</h3>
-                        <br>
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <label for="name">Ваше имя</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Телефон</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Сообщение</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-                <!-- Карта под сеткой контактов -->
-                <div class="contact-map fade-in">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.33418579124!2d37.61556331590748!3d55.7522209805541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0x86dce5f7e8c3e6b1!2zS3Jhc25heWEgcGxvcywgMSwgTW9za3ZhLCBSdXNzaWEsIDEwOTAxMg!5e0!3m2!1sen!2sua!4v1633024523067!5m2!1sen!2sua" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Футер -->
-    <footer class="footer">
-        <p>&copy; 2025 БухЭксперт. Все права защищены.</p>
-    </footer>
-
-    <!-- Липкая кнопка для связи -->
-    <a href="#contact" class="sticky-contact-btn" title="Связаться с нами">
-        <i class="fas fa-headset" aria-hidden="true"></i>
-    </a>
-
-    <script defer src="scripts.js"></script>
+<body class="bg-secondary-50">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-secondary-200 bg-white/80 px-4 py-4 backdrop-blur-sm md:px-10">
+<div class="flex items-center gap-3 text-secondary-800">
+<svg class="h-8 w-8 text-primary-500" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-secondary-800 text-xl font-bold leading-tight tracking-[-0.015em]">БухЭксперт</h2>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-secondary-600 hover:text-primary-500 text-base font-medium leading-normal transition-colors" href="#about">О компании</a>
+<a class="text-secondary-600 hover:text-primary-500 text-base font-medium leading-normal transition-colors" href="#services">Услуги</a>
+<a class="text-secondary-600 hover:text-primary-500 text-base font-medium leading-normal transition-colors" href="#testimonials">Отзывы</a>
+<a class="text-secondary-600 hover:text-primary-500 text-base font-medium leading-normal transition-colors" href="#contact">Контакты</a>
+</nav>
+<button class="hidden md:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-md transition-all duration-300" style="background-color: rgb(49, 72, 59);" onmouseover="this.style.backgroundColor='rgb(37, 54, 44)'" onmouseout="this.style.backgroundColor='rgb(49, 72, 59)'">
+<span class="truncate">Получить консультацию</span>
+</button>
+<button class="md:hidden flex items-center justify-center size-12 rounded-full bg-primary-500 text-white" id="mobile-menu-button">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col">
+<div class="px-4 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1 gap-12">
+<div class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-2xl items-start justify-center p-8 @[480px]:p-12" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbS2jGbcg9wbMjocchPTgHaMhYrsi2RcMJuMS1TVeo66P_mmJaRHtFmPnAiwmAOScwBPGu4OocyY20sEBC7Kvz1eli0CCiWC4QiD4zNMoY3idojRvVMwYX6b5660zbQzUX-iCROJzTnp4dpRFf-Z2B38Oe7Oc5OYWRWouRmo5Y8_PxMJEQrnBb5KZ3WXsjEhKj253ZIjNv-6ghgmCFZoMNeErR0awRLTIlAO53cr5weA3S85RGf3Ojt1bFnAmfdEs6dlxAKaYFIewj");' loading="lazy">
+<div class="flex flex-col gap-4 text-left max-w-2xl">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                        Бухгалтерское обслуживание в Челябинске
+                      </h1>
+<h2 class="text-white/90 text-base font-normal leading-normal @[480px]:text-xl @[480px]:font-normal @[480px]:leading-normal">
+                        Надежность, точность и своевременность в каждом отчете.
+                      </h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 bg-black text-white text-lg font-bold leading-normal tracking-[0.015em] shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105">
+<span class="truncate">Получить консультацию</span>
+</button>
+</div>
+</div>
+</div>
+<section id="about" class="p-4 flex flex-col gap-4">
+<h2 class="text-secondary-800 text-2xl font-bold leading-tight tracking-[-0.015em] @[480px]:text-3xl">Наша История</h2>
+<p class="text-secondary-600 text-base font-normal leading-relaxed max-w-4xl @[480px]:text-lg">
+                  Наша компания была основана в 2010 году с целью предоставления высококачественных бухгалтерских услуг для малого и среднего бизнеса. За годы работы мы зарекомендовали себя как надежный партнер, помогающий нашим клиентам оптимизировать налогообложение и вести финансовый учет в соответствии со всеми стандартами. Мы гордимся нашей командой профессионалов, которые постоянно совершенствуют свои знания.
+                </p>
+</section>
+<section id="services" class="p-4 flex flex-col gap-4">
+<h2 class="text-secondary-800 text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 @[480px]:text-3xl">Наши бухгалтерские услуги</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary-500 text-4xl">book</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-secondary-800 text-xl font-bold leading-tight">Бухгалтерское сопровождение</h3>
+<p class="text-secondary-500 text-base font-normal leading-normal">Полное ведение бухгалтерского и налогового учета вашей компании.</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary-500 text-4xl">receipt_long</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-secondary-800 text-xl font-bold leading-tight">Расчет заработной платы</h3>
+<p class="text-secondary-500 text-base font-normal leading-normal">Своевременный и точный расчет заработной платы, налогов и взносов.</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary-500 text-4xl">paid</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-secondary-800 text-xl font-bold leading-tight">Налоговое консультирование</h3>
+<p class="text-secondary-500 text-base font-normal leading-normal">Оптимизация налоговой нагрузки и консультации по вопросам законодательства.</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary-500 text-4xl">insights</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-secondary-800 text-xl font-bold leading-tight">Бизнес-консультирование</h3>
+<p class="text-secondary-500 text-base font-normal leading-normal">Стратегическое консультирование, чтобы помочь вам принимать обоснованные финансовые решения и развивать свой бизнес.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-us" class="p-4 flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h2 class="text-secondary-800 text-2xl font-bold leading-tight tracking-[-0.015em] @[480px]:text-3xl">Почему выбирают нас</h2>
+<p class="text-secondary-600 text-base font-normal leading-relaxed max-w-4xl @[480px]:text-lg">
+                    Мы стремимся предоставлять исключительные бухгалтерские услуги, которые помогают вашему бизнесу процветать. Наш клиентоориентированный подход обеспечивает персонализированные решения и надежную поддержку.
+                  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary-500 text-4xl">groups</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-secondary-800 text-xl font-bold leading-tight">Опытные профессионалы</h3>
+<p class="text-secondary-500 text-base font-normal leading-normal">Наша команда сертифицированных бухгалтеров имеет большой опыт работы с финансами в различных отраслях.</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary-500 text-4xl">shield</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-secondary-800 text-xl font-bold leading-tight">Надежность и безопасность</h3>
+<p class="text-secondary-500 text-base font-normal leading-normal">Мы обеспечиваем высочайший уровень безопасности и конфиденциальности ваших финансовых данных.</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+<span class="material-symbols-outlined text-primary-500 text-4xl">schedule</span>
+<div class="flex flex-col gap-2">
+<h3 class="text-secondary-800 text-xl font-bold leading-tight">Своевременность и эффективность</h3>
+<p class="text-secondary-500 text-base font-normal leading-normal">Мы предоставляем своевременные и эффективные услуги для соблюдения ваших сроков и бесперебойной работы вашего бизнеса.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="testimonials" class="p-4 flex flex-col gap-8">
+<h2 class="text-secondary-800 text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 @[480px]:text-3xl">Отзывы наших клиентов</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<img src="https://i.pravatar.cc/150?img=1" alt="Аватар Ивана Петрова" class="w-12 h-12 rounded-full object-cover">
+<div class="flex-1">
+<p class="text-secondary-800 text-lg font-medium leading-normal">Иван Петров</p>
+<p class="text-secondary-500 text-sm font-normal leading-normal">Ген. директор "СтройТех"</p>
+</div>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+</div>
+<p class="text-secondary-600 text-base font-normal leading-normal">"Передали бухгалтерию на аутсорс в 'БухЭксперт' год назад и ни разу не пожалели. Все отчеты сдаются вовремя, налоги оптимизированы. Настоящие профессионалы!"</p>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<img src="https://i.pravatar.cc/150?img=2" alt="Аватар Марии Сидоровой" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+<div class="flex-1">
+<p class="text-secondary-800 text-lg font-medium leading-normal">Мария Сидорова</p>
+<p class="text-secondary-500 text-sm font-normal leading-normal">Владелец "Кафе Уют"</p>
+</div>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-secondary-300 text-xl">star</span>
+</div>
+<p class="text-secondary-600 text-base font-normal leading-normal">"Очень довольна работой команды. Всегда на связи, готовы проконсультировать по любому вопросу. Помогли разобраться со сложной системой налогообложения для общепита."</p>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-secondary-200 bg-white p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<img src="https://i.pravatar.cc/150?img=3" alt="Аватар Алексея Иванова" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+<div class="flex-1">
+<p class="text-secondary-800 text-lg font-medium leading-normal">Алексей Иванов</p>
+<p class="text-secondary-500 text-sm font-normal leading-normal">IT-стартап "КодБудущего"</p>
+</div>
+</div>
+<div class="flex gap-0.5">
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+<span class="material-symbols-outlined text-primary-500 text-xl">star</span>
+</div>
+<p class="text-secondary-600 text-base font-normal leading-normal">"Как стартапу нам было важно найти надежного партнера, который возьмет на себя всю бумажную волокиту. 'БухЭксперт' — именно такая компания. Рекомендую!"</p>
+</div>
+</div>
+</section>
+<section id="contact" class="p-4 flex flex-col lg:flex-row gap-12 items-start">
+<div class="flex-1 w-full lg:max-w-md flex flex-col gap-6">
+<h2 class="text-secondary-800 text-2xl font-bold leading-tight tracking-[-0.015em] @[480px]:text-3xl">Свяжитесь с нами</h2>
+<form class="flex flex-col gap-6" id="contact-form">
+<label class="flex flex-col">
+<span class="text-secondary-700 text-base font-medium leading-normal pb-2">Ваше имя</span>
+<input type="text" id="name" name="name" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-secondary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 border border-secondary-300 bg-white h-12 placeholder:text-secondary-400 p-3 text-base font-normal leading-normal" placeholder="Ваше имя" value=""/>
+<div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+</label>
+<label class="flex flex-col">
+<span class="text-secondary-700 text-base font-medium leading-normal pb-2">Email</span>
+<input type="email" id="email" name="email" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-secondary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 border border-secondary-300 bg-white h-12 placeholder:text-secondary-400 p-3 text-base font-normal leading-normal" placeholder="Ваш Email" value=""/>
+<div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+</label>
+<label class="flex flex-col">
+<span class="text-secondary-700 text-base font-medium leading-normal pb-2">Телефон</span>
+<input type="tel" id="phone" name="phone" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-secondary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 border border-secondary-300 bg-white h-12 placeholder:text-secondary-400 p-3 text-base font-normal leading-normal" placeholder="Ваш Телефон" value=""/>
+<div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+</label>
+<label class="flex flex-col">
+<span class="text-secondary-700 text-base font-medium leading-normal pb-2">Сообщение</span>
+<textarea id="message" name="message" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-secondary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 border border-secondary-300 bg-white min-h-36 placeholder:text-secondary-400 p-3 text-base font-normal leading-normal" placeholder="Ваше Сообщение"></textarea>
+<div class="error-message text-red-500 text-sm mt-1 hidden"></div>
+</label>
+<div id="form-success" class="text-green-600 text-sm mt-2 hidden">Сообщение отправлено успешно!</div>
+<div id="form-error" class="text-red-500 text-sm mt-2 hidden">Ошибка отправки сообщения. Попробуйте еще раз.</div>
+<button type="submit" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary-500 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-md hover:bg-primary-600 transition-all duration-300">
+<span class="truncate">Отправить сообщение</span>
+</button>
+</form>
+</div>
+<div class="flex-1 w-full aspect-square lg:aspect-auto lg:h-[600px] rounded-2xl overflow-hidden shadow-lg">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2158!2d61.4028!3d55.1644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5927c9c9c9c9c9%3A0x0!2z0J_QvtC90YHRgtC10L3QutC4LCAyNTY!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</section>
+</div>
+</div>
+</main>
+<footer class="flex justify-center border-t border-secondary-200">
+<div class="flex max-w-[1200px] flex-1 flex-col">
+<div class="flex flex-col gap-6 px-5 py-10 text-center">
+<p class="text-secondary-500 text-base font-normal leading-normal">© 2025 БухЭксперт. Все права защищены.</p>
+</div>
+</div>
+</footer>
+<button class="fixed bottom-8 right-8 flex items-center justify-center gap-3 rounded-full h-16 w-16 text-white shadow-xl transition-all duration-300 transform hover:scale-110" style="background-color: rgb(49, 72, 59);" onmouseover="this.style.backgroundColor='rgb(37, 54, 44)'" onmouseout="this.style.backgroundColor='rgb(49, 72, 59)'">
+<span class="material-symbols-outlined text-3xl">phone</span>
+</button>
+</div>
+<script defer src="scripts.js"></script>
+</body>
+<div class="md:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 transform translate-x-full" id="mobile-menu">
+<nav class="flex flex-col items-center gap-6">
+<a class="text-secondary-800 hover:text-primary-500 text-xl font-medium leading-normal transition-colors" href="#about">О компании</a>
+<a class="text-secondary-800 hover:text-primary-500 text-xl font-medium leading-normal transition-colors" href="#services">Услуги</a>
+<a class="text-secondary-800 hover:text-primary-500 text-xl font-medium leading-normal transition-colors" href="#testimonials">Отзывы</a>
+<a class="text-secondary-800 hover:text-primary-500 text-xl font-medium leading-normal transition-colors" href="#contact">Контакты</a>
+</nav>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary-500 text-white text-base font-bold leading-normal tracking-[0.015em] shadow-md hover:bg-primary-600 transition-all duration-300">
+<span class="truncate">Получить консультацию</span>
+</button>
+<button class="absolute top-4 right-4 flex items-center justify-center size-12 rounded-full bg-primary-500 text-white" id="close-mobile-menu-button">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<script defer src="scripts.js"></script>
 </body>
 </html>
